@@ -1,0 +1,1 @@
+add_executable(legacy_c legacy_program.c)
