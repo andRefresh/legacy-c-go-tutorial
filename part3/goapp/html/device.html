@@ -1,0 +1,21 @@
+<div class="block">
+    <span> Value: </span>
+    <span class="is-size-3
+    {{if .viewModel.IsRed}}
+        has-text-danger
+    {{end}}
+    ">{{.viewModel.SomeValue}} </span>
+    
+</div>
+
+<div class="block">
+    {{if .viewModel.IsActivated}}
+        <button class="button is-danger" hx-get="/api/set_on?on=false" hx-swap="none">Stop</button>
+
+    {{else}}
+        <button class="button is-primary" hx-get="/api/set_on?on=true" hx-swap="none">Start</button>
+
+    {{end}}
+    
+</div>
+
